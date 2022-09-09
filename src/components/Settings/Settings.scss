@@ -1,0 +1,164 @@
+.settings-modal {
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 500px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    color: #1F2140;
+    display: none;
+    z-index: -100;
+
+    &.active {
+        z-index: 1000;
+        display: block;
+    }
+
+    .caption {
+        padding: 1.5rem;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e8ecfa;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .close-icon {
+            width: 25px;
+            height: 25px;
+            fill: #6c6969;
+            cursor: pointer;
+        }
+    }
+
+    .settings-form {
+        padding: 0 1.5rem;
+        position: relative;
+
+        .select-time {
+            padding: 1.4rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .mode-options {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+        }
+
+        .select-font {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-top: 1px solid #e8ecfa;
+
+            .font-options {
+                display: flex;
+                gap: 10px;
+
+                .font-option {
+                    width: 35px;
+                    height: 35px;
+                    background-color: #D7E0FF;
+                    color: #292828;
+                    border-radius: 50%;
+                    padding: .4rem;
+                    text-align: center;
+                    cursor: pointer;
+
+                    &.active {
+                        background-color: #151932;
+                        color: #f8f8f8;
+                    }
+
+                    &:nth-child(1) {
+                        font-family: "Open Sans", "sans-serif";
+                    }
+
+                    &:nth-child(2) {
+                        font-family: "Oswald", "sans-serif";
+                    }
+
+                    &:nth-child(3) {
+                        font-family: "Roboto Mono", "monospace";
+                    }
+                }
+            }
+        }
+
+        .select-color {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0 2.5rem 0;
+            border-top: 1px solid #e8ecfa;
+
+            .color-options {
+                display: flex;
+                gap: 10px;
+
+                .color-option {
+                    width: 35px;
+                    height: 35px;
+                    background-color: #D7E0FF;
+                    border-radius: 50%;
+                    padding: .4rem;
+                    cursor: pointer;
+                    position: relative;
+
+                    &:nth-child(1) {
+                        background-color: #F77373;
+                    }
+
+                    &:nth-child(2) {
+                        background-color: #59d4d9;
+                    }
+
+                    &:nth-child(3) {
+                        background-color: #D881F8;
+                    }
+
+                    .checked-icon {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 50%;
+                        transform: translate(-50%, 50%);
+                        width: 17px;
+                        height: 17px;
+                    }
+                }
+            }
+        }
+
+        .subheading {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        button.apply {
+            border: none;
+            background-color: var(--primary-color);
+            color: #f8f8f8;
+            border-radius: 1rem;
+            padding: 0.7rem 1.3rem;
+            font-size: 1.1rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            cursor: pointer;
+        }
+        label{
+            white-space: nowrap;
+        }
+    }
+}

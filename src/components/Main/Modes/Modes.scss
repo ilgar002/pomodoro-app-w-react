@@ -1,0 +1,19 @@
+.mode-option-btns {
+    background-color: #151932;
+    padding: 0.3rem;
+    border-radius: 1.5rem;
+
+    button {
+        background-color: transparent;
+        border: none;
+        padding: 1rem;
+        color: #f8f8f8;
+        font-size: 1.2rem;
+        border-radius: 1.5rem;
+        cursor: pointer;
+
+        &.active {
+            background-color: var(--primary-color);
+        }
+    }
+}
