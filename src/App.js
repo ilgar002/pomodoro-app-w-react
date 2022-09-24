@@ -11,7 +11,7 @@ const App = () => {
 
   const [settingsVisibility, setSettingsVisibility] = useState(false)
   const [currentMode, setCurrentMode] = useState(localStorage.getItem('currentMode') ? JSON.parse(localStorage.getItem('currentMode')) : "pomodoro")
-  const [timeValue, setTimeValue] = useState(localStorage.getItem('timeValue') ? JSON.parse(localStorage.getItem('timeValue')) : { pomodoro: 0.25, shortBreak: 5, longBreak: 15 })
+  const [timeValue, setTimeValue] = useState(localStorage.getItem('timeValue') ? JSON.parse(localStorage.getItem('timeValue')) : { pomodoro: 25, shortBreak: 5, longBreak: 15 })
   const [currentFont, setCurrentFont] = useState(localStorage.getItem('currentFont') ? JSON.parse(localStorage.getItem('currentFont')) : ['Open Sans', 'sans-serif'])
   const [primaryColor, setPrimaryColor] = useState(localStorage.getItem('primaryColor') ? JSON.parse(localStorage.getItem('primaryColor')) : "#F77373")
 
