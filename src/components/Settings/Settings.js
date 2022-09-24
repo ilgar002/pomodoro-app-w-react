@@ -15,7 +15,7 @@ const Settings = ({ settingsVisibility, setSettingsVisibility, timeValue, setTim
     window.addEventListener("click", (e) => {
       e.target === layoutRef.current && setSettingsVisibility(false)
     })
-  }, [settingsVisibility])
+  }, [settingsVisibility, setSettingsVisibility, layoutRef])
 
   function closeSettings() {
     setSettingsVisibility(false)

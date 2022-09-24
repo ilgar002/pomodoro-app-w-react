@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef,useCallback } from 'react'
 import './App.scss'
 import Header from './components/Header/Header';
 import Main from "./components/Main/Main";
@@ -35,14 +35,17 @@ const App = () => {
     localStorage.setItem("currentMode", JSON.stringify(currentMode))
   }, [currentMode])
 
-  function convertToSeconds(value) {
-    value = Number(value)
-    let minutes = parseInt(value / 60)
-    let seconds = parseInt(value % 60)
-    seconds = seconds >= 10 ? `${seconds}` : `0${seconds}`
-    let result = `${minutes}:${seconds}`
-    return result
-  }
+  const convertToSeconds = useCallback(
+    (value) => {
+      value = Number(value)
+      let minutes = parseInt(value / 60)
+      let seconds = parseInt(value % 60)
+      seconds = seconds >= 10 ? `${seconds}` : `0${seconds}`
+      let result = `${minutes}:${seconds}`
+      return result
+    },
+    [],
+  );
 
   return (
     <div className='container'>

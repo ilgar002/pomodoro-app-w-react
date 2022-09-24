@@ -46,10 +46,12 @@ const Timer = ({ currentMode, timeValue, convertToSeconds }) => {
             if (isTimerOpen) {
                 animationRef.current.style.strokeDashoffset = 1036.2 - (1036.2 * (remainingTime / initTime))
             }
+            else{
+                animationRef.current.style.strokeDashoffset=0
+            }
         }
-        // document.title = `Pomodoro App`
         isTimerOpen ? document.title = `${convertToSeconds(remainingTime)} | Pomodoro App` : document.title = `Pomodoro App`
-    }, [remainingTime, isTimerOpen])
+    }, [remainingTime, isTimerOpen, convertToSeconds, initTime])
 
 
     function onClickStart() {
